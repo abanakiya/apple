@@ -1,0 +1,15 @@
+# Automator > File > New > Service > Run Apple Script
+# Service receives "no input" in "any application"
+
+# Script:
+  set Vol to get volume settings
+  if output muted of Vol is false then
+    set volume with output muted
+  else
+    set volume without output muted
+  end if
+
+# Save "Mute Toggle" (default: User\Library\Services)
+
+# System Preference > Keyboard > Shortcuts > Services 
+# Find "Mute Toggle" at the end of service list (under General), configure keybinding
